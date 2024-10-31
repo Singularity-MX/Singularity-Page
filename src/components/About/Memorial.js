@@ -38,7 +38,7 @@ function MemorialPage() {
         </Row>
         
         <h1 className="project-heading">
-          <strong className="purple">Explora</strong> las diferentes comunidades duronte la pandemia
+          <strong className="purple">Explora</strong> las diferentes comunidades
         </h1>
         <br />
         <Toolstack />
