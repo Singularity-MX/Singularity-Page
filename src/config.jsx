@@ -1,2 +1,3 @@
 // globals.js
-export const deploy = false;
+export const deploy = true;
+
