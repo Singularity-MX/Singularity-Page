@@ -182,7 +182,7 @@ function Roadmap() {
             <Row>
               <Col md={7} className="home-header">
                 <h1 style={{ paddingBottom: 0 }} className="heading">
-                  ¡Welcome!{" "}
+                  ¡Hello world!{" "}
                   <span className="wave" role="img" aria-labelledby="wave">
                     💀
                   </span>
