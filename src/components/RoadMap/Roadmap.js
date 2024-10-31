@@ -84,7 +84,7 @@ function Roadmap() {
         const nextPage = (currentOffset + 1) % 4; // Cambia 4 por el número total de páginas
         parallax.current.scrollTo(nextPage);
       }
-    }, 100000); // 5000 ms = 5 segundos
+    }, 6000); // 5000 ms = 5 segundos
   
     // Limpieza del intervalo cuando el componente se desmonta
     return () => clearInterval(scrollInterval);
