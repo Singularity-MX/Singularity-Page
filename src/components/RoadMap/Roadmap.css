@@ -1,7 +1,12 @@
-.containerParallax{
-  background-color: rgb(39, 4, 59);
+.containerParallax {
   width: 100vw;
   height: 100vh;
+
+  /* Fondo espacial azul-negro más claro */
+  background: radial-gradient(circle at 30% 30%, #1a2a5c 0%, #0d1533 70%, #000010 100%),
+              linear-gradient(180deg, #00112a 0%, #0d1b3f 50%, #000020 100%);
+  background-blend-mode: overlay;
+  overflow: hidden;
 }
 
 

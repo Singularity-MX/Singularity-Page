@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home/Home";
-import MemorialPage from "./components/About/Memorial";
-import Quiz from "./components/Quiz/Quiz";
-import Footer from "./components/Footer";
-import TopScorePage from "./components/TopScore/TopScorePage";
+
+import Quienes_somos from "./components/Quienes_somos/QuienesSomos_page";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -17,15 +15,15 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import TestimonioCientificos from "./components/About/Cientificos/Cientificos";
-import TestimonioSalud from "./components/About/Salud/PersonalSalud";
-import TestimonioVoluntarios from "./components/About/Voluntarios/Voluntarios";
-import TestimonioPacientes from "./components/About/Pacientes/Pacientes";
-import TestimonioPlaneta from "./components/About/Planeta/Planeta";
-
+import AreaTecnolgica from "./components/Quienes_somos/Tecnologica/Tecnologica";
+import Area_social from "./components/Quienes_somos/social/Social";
+import AreaEconomica from "./components/Quienes_somos/Economica/Economica";
+import AreaDifusion from "./components/Quienes_somos/Difusion/Difusion";
+import AreaGestion from "./components/Quienes_somos/Gestion_interna/Gesion";
 import Roadmap from "./components/RoadMap/Roadmap";
-
-import Game from "./components/Quiz/Game";
+import Proyectos from "./components/Proyectos/Proyectos";
+import Eventos from "./components/Eventos/Eventos";
+import Contacto from "./components/Contacto/Contacto";
 
 import TiempoRestante from "./components/timer/Timer";
 
@@ -48,20 +46,25 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Roadmap />} />
-          <Route path="/memorial" element={<MemorialPage />} />
-          <Route path="/quiz" element={<Quiz />} />
-          <Route path="/resume" element={<TopScorePage />} />
+          <Route path="/quienes_somos" element={<Quienes_somos />} />
+          <Route path="/proyectos" element={<Proyectos />} />
+          <Route path="/eventos" element={<Eventos />} />
+          <Route path="/contacto" element={<Contacto />} />
+
+          {/* Rutas para las áreas de Quienes Somos */}
+      
           <Route path="*" element={<Navigate to="/"/>} />
 
-          <Route path="/memorial/cientificos" element={<TestimonioCientificos />} />
-          <Route path="/memorial/salud" element={<TestimonioSalud />} />
-          <Route path="/memorial/voluntarios" element={<TestimonioVoluntarios />} />
-          <Route path="/memorial/pacientes" element={<TestimonioPacientes />} />
-          <Route path="/memorial/planeta" element={<TestimonioPlaneta />} />
+          <Route path="/quienes_somos/tecnologica" element={<AreaTecnolgica />} />
+          <Route path="/quienes_somos/social" element={<Area_social />} />
+          <Route path="/quienes_somos/economica" element={<AreaEconomica />} />
+          <Route path="/quienes_somos/difusion" element={<AreaDifusion />} />
+          <Route path="/quienes_somos/gestion" element={<AreaGestion />} />
+
 
           <Route path="/roadmap" element={<Roadmap />} />
 
-          <Route path="/quiz/game" element={<Game />} />
+          
 
           <Route path="/timer" element={<TiempoRestante />} />
 

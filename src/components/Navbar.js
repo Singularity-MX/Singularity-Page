@@ -1,34 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
 import {
-  AiFillStar,
   AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
+  AiOutlineTeam,
+  AiOutlineBulb,
+  AiOutlineCalendar,
+  AiOutlineMail
 } from "react-icons/ai";
-
-import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
-  function scrollHandler() {
-    if (window.scrollY >= 20) {
-      updateNavbar(true);
-    } else {
-      updateNavbar(false);
+  useEffect(() => {
+    function scrollHandler() {
+      if (window.scrollY >= 20) {
+        updateNavbar(true);
+      } else {
+        updateNavbar(false);
+      }
     }
-  }
-
-  window.addEventListener("scroll", scrollHandler);
+    window.addEventListener("scroll", scrollHandler);
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
 
   return (
     <Navbar
@@ -36,29 +35,45 @@ function NavBar() {
       fixed="top"
       expand="md"
       className={navColour ? "sticky" : "navbar"}
-      style={{ 
-        background: 'rgba(0, 0, 0, 0.1)',
-        backdropFilter: 'blur(10px)', // Efecto de difusión (blur)
-    WebkitBackdropFilter: 'blur(10px)',
-       }}
+      style={{
+        background: "rgba(0, 0, 0, 0.1)",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
+        
+      }}
     >
-      <Container>
-        <Navbar.Brand href="/" className="d-flex">
-        <h1 style={{ color: "white", fontFamily: 'sans-serif'}}>
-  &lt;CABTC/&gt;
-</h1>
-
+      <Container style={{ alignItems: "stretch" }}>
+        <Navbar.Brand
+          href="/"
+          className="d-flex align-items-center"
+          style={{
+            
+           
+            borderRadius: "10px",
+            height: "60px", // ocupa todo el alto del Navbar
+            
+          }}
+        >
+          <img
+            src="/assets/logo3.svg"
+            alt="Logo"
+            style={{
+              height: "20px", // ocupa todo el alto disponible
+              width: "auto", // mantiene proporción
+              objectFit: "contain",
+            }}
+          />
         </Navbar.Brand>
+
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
-          onClick={() => {
-            updateExpanded(expand ? false : "expanded");
-          }}
+          onClick={() => updateExpanded(expand ? false : "expanded")}
         >
           <span></span>
           <span></span>
           <span></span>
         </Navbar.Toggle>
+
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
@@ -70,39 +85,42 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/memorial"
+                to="/quienes_somos"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> Memorial
+                <AiOutlineTeam style={{ marginBottom: "2px" }} /> Quiénes somos
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/quiz"
+                to="/proyectos"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Quiz
+                <AiOutlineBulb style={{ marginBottom: "2px" }} /> Proyectos
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/resume"
+                to="/eventos"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Scores
+                <AiOutlineCalendar style={{ marginBottom: "2px" }} /> Eventos
               </Nav.Link>
             </Nav.Item>
 
-            
-
-            
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/contacto"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineMail style={{ marginBottom: "2px" }} /> Contacto
+              </Nav.Link>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>

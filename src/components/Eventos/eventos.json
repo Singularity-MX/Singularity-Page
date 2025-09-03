@@ -1,0 +1,46 @@
+[
+{
+  "title": "Prototipado rápido de aplicaciones",
+  "description": "Convierte tus ideas en prototipos funcionales en solo 1:30 horas. Diseña y presenta soluciones creativas durante el hackathon.",
+  "dateTime": "29/Ago/25",
+  "location": "León",
+  "modality": "Presencial",
+  "imgSrc": "/assets/Events/prototipado.webp",
+  "registrationLink": "https://www.eventbrite.com.mx/e/1637052160079?aff=oddtdtcreator",
+  "members": true,
+  "visible": true,
+  "end": true,
+  "linkPhotos": "https://www.instagram.com/p/DOBFa7WjCkN/?utm_source=ig_web_copy_link",
+  "type_event": "Workshop"
+},
+
+{
+  "title": "Nasa Space Apps 2025",
+  "description": "Hackathon global de la NASA donde equipos desarrollan soluciones innovadoras a retos espaciales y sociales. Súmate a nuestro equipo en Singularity.",
+  "dateTime": "04/Oct/25",
+  "location": "Querétaro",
+  "modality": "Presencial",
+  "imgSrc": "/assets/Events/nasa_space_apps2025.webp",
+  "registrationLink": "https://www.spaceappschallenge.org/",
+  "members": true,
+  "visible": true,
+  "end": false,
+  "linkPhotos": "https://photos.app.goo.gl/EXAMPLE",
+  "type_event": "Hackathón"
+},
+
+{
+  "title": "Nuevo ingreso 2025",
+  "description": "Únete a Singularity y desarrolla proyectos de base tecnológica, impulsados por la innovación abierta y el enfoque open source.",
+  "dateTime": "10/Oct/25",
+  "location": "León",
+  "modality": "Virtual",
+  "imgSrc": "/assets/Events/logo.webp",
+  "registrationLink": "https://forms.gle/LKSijNz5o8xVqBmb9",
+  "members": false,
+  "visible": true,
+  "end": false,
+  "linkPhotos": "https://photos.app.goo.gl/EXAMPLE",
+  "type_event": "Convocatoria"
+}
+]

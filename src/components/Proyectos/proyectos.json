@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Evaluasaurio",
+    "description": "Web app para evaluar de manera anónima el desempeño de los docentes.",
+    "imgSrc": "/assets/Projects/evaluasaurio.webp",
+    "githubLink": "https://github.com/ReplacedSpace17/Evaluasaurio",
+    "active": true,
+    "nodo": "León"
+  },
+  {
+    "title": "Bioharvest",
+    "description": "Sistema de detección basado en RGB de fases de crecimiento de microalgas en fotobiorreactores.",
+    "imgSrc": "/assets/Projects/bioharvest.webp",
+    "githubLink": "https://github.com/Singularity-MX/Bioharvest",
+    "active": true,
+  "nodo": "León"
+  },
+  {
+    "title": "Axiom",
+    "description": "Plataforma de registro y seguimiento de proyectos científicos en la blockchain.",
+    "imgSrc": "/assets/Projects/axiom.webp",
+    "githubLink": "https://github.com/ReplacedSpace17/axiom",
+    "active": false,
+    "nodo": "León"
+  },
+  {
+    "title": "Rooms",
+    "description": "Sistema para monitoreo de adultos mayores con alertas de emergencia.",
+    "imgSrc": "/assets/Projects/rooms.webp",
+    "githubLink": "https://github.com/Singularity-MX/Rooms-App-flutter",
+    "active": false,
+    "nodo": "León"
+  },
+  {
+    "title": "Life-Up",
+    "description": "Solución para optimizar centros gerontológicos locales.",
+    "imgSrc": "/assets/Projects/lifeup.webp",
+    "githubLink": "https://github.com/Singularity-MX/Life-Up-App",
+    "active": false,
+    "nodo": "León"
+  },
+  {
+    "title": "Glucontrol",
+    "description": "App para monitoreo y control personalizado de niveles glucémicos.",
+    "imgSrc": "/assets/Projects/glucontrol.webp",
+    "githubLink": "https://github.com/Singularity-MX/Glucontrol_App",
+    "active": false,
+    "nodo": "León"
+  }
+]

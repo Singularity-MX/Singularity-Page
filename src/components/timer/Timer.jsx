@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from 'antd';   // ⬅️ Importar el botón
 import './Timer.css';
 
 const TiempoRestante = () => {
-    const fechaObjetivo = new Date('2024-11-01T12:00:00');
+    const fechaObjetivo = new Date('2025-10-01T12:00:00');
 
     const calcularTiempoRestante = () => {
         const ahora = new Date();
@@ -29,9 +30,14 @@ const TiempoRestante = () => {
         return () => clearInterval(intervalo);
     }, []);
 
+    const handleUnirse = () => {
+        // navegar a https://forms.gle/bLQ652awWrpBWgFh9 en blank
+        window.open('https://forms.gle/bLQ652awWrpBWgFh9', '_blank');
+    };
+
     return (
         <div className="timer-container">
-            <h2 className="timer-header">Tiempo Restante:</h2>
+            <h2 className="timer-header">Convocatoria abierta:</h2>
             <div className="timer-value">
                 <div className="timer-segment">
                     <p>{tiempoRestante.dias}</p>
@@ -50,6 +56,17 @@ const TiempoRestante = () => {
                     <span className="timer-label">Segundos</span>
                 </div>
             </div>
+
+            {/* Botón Unirse */}
+            <Button 
+                type="primary" 
+                size="large" 
+                shape="rectangle" 
+                onClick={handleUnirse}
+                style={{ marginTop: "20px", width:"100%" }}
+            >
+                Unirse 🚀
+            </Button>
         </div>
     );
 };

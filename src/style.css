@@ -1,8 +1,8 @@
 html {
   --section-background-color: linear-gradient(
     to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
+    rgba(255, 255, 255, 0)
+    rgba(12, 8, 24, 0)
   );
 
   --image-gradient: linear-gradient(
@@ -11,7 +11,7 @@ html {
     rgba(12, 10, 22, 0.863)
   );
 
-  --imp-text-color: #c770f0;
+  --imp-text-color: #6D30D7;
 }
 
 .purple {
@@ -48,7 +48,7 @@ button:focus {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: #0c0513;
+  background-color: #0b062e;
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -210,7 +210,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #c95bf5;
+  background: #ffffff;
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -224,6 +224,28 @@ button:focus {
 /* --------- */
 /* Home section */
 /* --------- */
+.zoom {
+  animation: zoom-animation 6s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes zoom-animation {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px rgba(109, 48, 215, 0.3));
+  }
+  50% {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 25px rgba(109, 48, 215, 0.8));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px rgba(109, 48, 215, 0.3));
+  }
+}
+
+
+
 .wave {
   animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
   animation-duration: 2.1s; /* Change to speed up or slow down */
@@ -297,17 +319,17 @@ button:focus {
 }
 
 .main-name {
-  color: #ff7300;
+  color: #d3e20c;
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #be6adf !important;
+  color: #6D30D7 !important;
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #b562d6 !important;
+  color: #6D30D7 !important;
 }
 
 @media (max-width: 767px) {
@@ -591,9 +613,9 @@ button:focus {
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
-  background-color: #801f95;
-  border: 2.2px solid rgba(238, 98, 5, 0.883) !important;
-  color: rgb(238, 96, 14);
+  background-color: #7f1f9500;
+  border: 2.2px solid rgba(255, 255, 255, 0.883) !important;
+  color: #6D30D7;
   
 }
 
